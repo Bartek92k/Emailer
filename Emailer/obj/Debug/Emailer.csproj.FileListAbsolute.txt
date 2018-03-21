@@ -1,0 +1,8 @@
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\obj\Debug\Emailer.csprojResolveAssemblyReference.cache
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\obj\Debug\Emailer.MainForm.resources
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\obj\Debug\Emailer.csproj.GenerateResource.Cache
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\bin\Debug\Emailer.exe.config
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\bin\Debug\Emailer.exe
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\bin\Debug\Emailer.pdb
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\obj\Debug\Emailer.exe
+Z:\Projekty Programowanie\C#\CSharpMailing\Emailer\Emailer\obj\Debug\Emailer.pdb
