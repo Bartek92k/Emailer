@@ -52,14 +52,14 @@ namespace Emailer
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(118, 50);
+			this.textBox1.Location = new System.Drawing.Point(133, 17);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(191, 20);
 			this.textBox1.TabIndex = 0;
 			// 
 			// lAdresOdbiorcy
 			// 
-			this.lAdresOdbiorcy.Location = new System.Drawing.Point(12, 53);
+			this.lAdresOdbiorcy.Location = new System.Drawing.Point(27, 20);
 			this.lAdresOdbiorcy.Name = "lAdresOdbiorcy";
 			this.lAdresOdbiorcy.Size = new System.Drawing.Size(100, 23);
 			this.lAdresOdbiorcy.TabIndex = 1;
@@ -67,7 +67,7 @@ namespace Emailer
 			// 
 			// lTemat
 			// 
-			this.lTemat.Location = new System.Drawing.Point(12, 103);
+			this.lTemat.Location = new System.Drawing.Point(27, 70);
 			this.lTemat.Name = "lTemat";
 			this.lTemat.Size = new System.Drawing.Size(100, 23);
 			this.lTemat.TabIndex = 3;
@@ -75,7 +75,7 @@ namespace Emailer
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(12, 150);
+			this.textBox3.Location = new System.Drawing.Point(27, 117);
 			this.textBox3.Multiline = true;
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(297, 124);
@@ -83,7 +83,7 @@ namespace Emailer
 			// 
 			// bWyslij
 			// 
-			this.bWyslij.Location = new System.Drawing.Point(234, 280);
+			this.bWyslij.Location = new System.Drawing.Point(249, 247);
 			this.bWyslij.Name = "bWyslij";
 			this.bWyslij.Size = new System.Drawing.Size(75, 23);
 			this.bWyslij.TabIndex = 5;
@@ -93,7 +93,7 @@ namespace Emailer
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(118, 100);
+			this.textBox2.Location = new System.Drawing.Point(133, 67);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(191, 20);
 			this.textBox2.TabIndex = 6;

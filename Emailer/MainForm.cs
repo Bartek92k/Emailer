@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
 using System.Windows.Forms;
-using System.Web;
-
 using System.Net.Mail;
-
 using System.Net;
 
 
@@ -18,34 +13,50 @@ namespace Emailer
 	{
 		
 	
-		String password = "92Kwiatuszek";
+		String passwd = "92Kwiatuszek";
+		String senderEmail = "bartek.92k@gmail.com";
 		public MainForm()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
-			
-			
-			
-	
-		}
+	}
 		void BWyslijClick(object sender, EventArgs e)
 		{
-			SmtpClient client = new SmtpClient("smtp.gmail.com", 465 );
-			client.Credentials = new NetworkCredential("bartek.92k@gmail.com",password);
-			MailMessage msg = new MailMessage();
-			msg.From = new MailAddress("bartek.92k@gmail.com");
-			msg.To.Add(new MailAddress(textBox1.Text));
-			msg.Subject = textBox2.Text;
-			msg.Body = textBox3.Text;
-			try{
-				client.Send(msg);
-				MessageBox.Show("wysłano wiadomosc");
-			}catch(Exception exp){
-				MessageBox.Show("Błąd, nie wysłano"+exp);
-		}
+			MailMessage mailMessage = new MailMessage();
+	        MailAddress mailAddress = new MailAddress(senderEmail, senderEmail); //input Sender Email Address 
+	        mailMessage.From = mailAddress;
+	        mailAddress = new MailAddress(textBox1.Text);
+	        mailMessage.To.Add(mailAddress);
+	        mailMessage.Subject = textBox2.Text;
+	        mailMessage.Body = textBox3.Text;
+	        mailMessage.IsBodyHtml = true;
+
+        SmtpClient mailSender = new SmtpClient("smtp.gmail.com", 587)
+        {
+            EnableSsl = true,
+            UseDefaultCredentials = false,
+            DeliveryMethod = System.Net.Mail.SmtpDeliveryMethod.Network,
+            Credentials = new NetworkCredential(senderEmail, passwd)       // input sender email address  
+                                                                           //pass = sender email password
+        };
+
+        try
+        {
+            mailSender.Send(mailMessage);
+            MessageBox.Show("wysłano wiadomosc");
+        }
+        catch (SmtpFailedRecipientException ex)
+        {MessageBox.Show("Błąd, nie wysłano"+ex); }
+        catch (SmtpException ex)
+        {MessageBox.Show("Błąd, nie wysłano"+ex); }
+        finally
+        {
+            mailSender = null;
+            mailMessage.Dispose();
+        }
+        
 		}
 	}
 }
