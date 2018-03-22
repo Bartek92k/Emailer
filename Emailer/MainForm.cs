@@ -12,11 +12,12 @@ namespace Emailer
 	public partial class MainForm : Form
 	{
 		
-	
-		String passwd = "92Kwiatuszek";
-		String senderEmail = "bartek.92k@gmail.com";
+		String passwd ;
+		String senderEmail ;
+		
 		public MainForm()
 		{
+			
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
@@ -24,6 +25,8 @@ namespace Emailer
 	}
 		void BWyslijClick(object sender, EventArgs e)
 		{
+			senderEmail = tblogin.Text;
+			passwd =tbhaslo.Text;
 			MailMessage mailMessage = new MailMessage();
 	        MailAddress mailAddress = new MailAddress(senderEmail, senderEmail); //input Sender Email Address 
 	        mailMessage.From = mailAddress;
@@ -55,10 +58,13 @@ namespace Emailer
         {
             mailSender = null;
             mailMessage.Dispose();
+            passwd = "";
+            senderEmail = "";
         }
         
 		}
 	}
+	
 }
 			
 			
